@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sadika Islam — A Personal Storybook</title>
+  <meta name="description"
+    content="The interactive digital CV of Sadika Islam, Management Student and Creative Designer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500&family=Caveat:wght@500;700&family=Noto+Serif+Bengali:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Loading sequence -->
+  <div id="loader" aria-hidden="true">
+    <span class="l1">S</span><span class="l2">SADIKA ISLAM</span><span class="l3">A PERSONAL STORYBOOK</span>
+  </div>
+
+  <div class="dust" id="dust" aria-hidden="true"></div>
+
+  <!-- The book is assembled here by script.js -->
+  <main class="stage" id="stage">
+    <div class="tilt" id="tilt">
+      <div class="book closed" id="book" role="button" tabindex="0" aria-label="Sadika Islam's CV book. Click to open.">
+      </div>
+    </div>
+  </main>
+
+  <button class="sound" id="sound" data-act="sound" aria-label="Turn page sound on" aria-pressed="false">🔇</button>
+
+  <nav class="ui" id="ui" aria-label="Book controls">
+    <button data-act="prev" aria-label="Previous page">← Previous</button>
+    <span id="counter" aria-live="polite">00 / 05</span>
+    <button data-act="next" aria-label="Next page">Next →</button>
+    <a class="btn small" data-cv href="Sadika-Islam-CV.pdf" download="Sadika-Islam-CV.pdf"
+      aria-label="Download Sadika Islam's CV as PDF">Download CV</a>
+  </nav>
+
+  <!-- Page templates: cloned into the book by script.js -->
+  <div id="pages" hidden>
+
+    <section class="page cover" data-id="cover">
+      <div class="foil"></div>
+      <p class="orn">❦</p>
+      <h1>SADIKA<br>ISLAM</h1>
+      <span class="rule"></span>
+      <p class="role">Management Student<br>Creative Designer</p>
+      <p class="sub">“My Story • My Skills • My Journey”</p>
+      <p class="hint">Click the book to open</p>
+    </section>
+
+    <section class="page" data-id="contents">
+      <p class="hand">a story in seven chapters</p>
+      <h2>Contents</h2><span class="rule"></span>
+      <ol class="toc">
+        <li><span>About Me</span><b>01</b></li>
+        <li><span>Academic Journey</span><b>02</b></li>
+        <li><span>Professional Training</span><b>03</b></li>
+        <li><span>My Skills</span><b>04</b></li>
+        <li><span>Languages</span><b>05</b></li>
+        <li><span>A Little More About Me</span><b>06</b></li>
+        <li><span>Let’s Connect</span><b>07</b></li>
+      </ol>
+      <p class="mono">S</p>
+      <footer>i</footer>
+    </section>
+
+    <section class="page" data-id="about">
+      <p class="hand">chapter one</p>
+      <h2>About Me</h2><span class="rule"></span>
+      <figure class="portrait">
+        <img data-profile alt="Portrait of Sadika Islam" loading="eager">
+      </figure>
+      <p class="body">Motivated BBA student majoring in Management, currently in the second year of honors studies. With
+        excellent academic achievements and professional training in Office Management and Graphics Design, I am eager
+        to apply my skills in Microsoft Office, Adobe tools, and project work. Fluent in both English and Bangla, I aim
+        to contribute effectively to organizational growth while continuously learning and developing myself.</p>
+      <ul class="chips">
+        <li>Management Student</li>
+        <li>Creative Designer</li>
+        <li>Office Management</li>
+        <li>Graphics Design</li>
+      </ul>
+      <footer>01</footer>
+    </section>
+
+    <section class="page" data-id="education">
+      <p class="hand">chapter two</p>
+      <h2>Academic Journey</h2><span class="rule"></span>
+      <ol class="timeline">
+        <li>
+          <h3>BBA (Honours) — Major in Management</h3>
+          <p>Siddheswari Girls’ College — Baily Road</p><span class="note">Ongoing — 2nd Year</span>
+        </li>
+        <li>
+          <h3>HSC — 2022</h3>
+          <p>National Ideal College, Dhaka<br>Business Studies</p><span class="note">GPA: 4.00</span>
+        </li>
+        <li>
+          <h3>SSC — 2020</h3>
+          <p>Motijheel Model School &amp; College, Dhaka<br>Business Studies</p><span class="note">GPA: 3.94</span>
+        </li>
+      </ol>
+      <footer>02</footer>
+    </section>
+
+    <section class="page" data-id="training">
+      <p class="hand">chapter three</p>
+      <h2>Professional Training</h2><span class="rule"></span>
+      <div class="cert">
+        <p class="hand">Diploma in</p>
+        <h3>Office Management &amp; Graphics Design</h3>
+        <dl class="facts">
+          <div>
+            <dt>Duration</dt>
+            <dd>6 Months</dd>
+          </div>
+          <div>
+            <dt>Completed</dt>
+            <dd>December 2023</dd>
+          </div>
+          <div>
+            <dt>Grade</dt>
+            <dd>A+</dd>
+          </div>
+        </dl>
+        <span class="seal" aria-hidden="true">A+</span>
+      </div>
+      <h4>Course Content</h4>
+      <ul class="chips plain">
+        <li>Fundamentals &amp; Windows</li>
+        <li>Microsoft Word</li>
+        <li>Microsoft Excel</li>
+        <li>Microsoft PowerPoint</li>
+        <li>Adobe Photoshop</li>
+        <li>Adobe Illustrator</li>
+        <li>Q-Xpress</li>
+        <li>Project Work</li>
+        <li>Bengali &amp; English Typing</li>
+        <li>Internet &amp; Online Applications</li>
+      </ul>
+      <p class="speed">Typing Speed <b>25–35 WPM</b></p>
+      <footer>03</footer>
+    </section>
+
+    <section class="page" data-id="skills">
+      <p class="hand">chapter four</p>
+      <h2>My Skills</h2><span class="rule"></span>
+      <div class="card">
+        <h3>Microsoft Office</h3>
+        <ul class="badges">
+          <li>❖ Microsoft Word</li>
+          <li>❖ Microsoft Excel</li>
+          <li>❖ Microsoft PowerPoint</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Adobe Creative Tools</h3>
+        <ul class="badges">
+          <li>✎ Adobe Photoshop</li>
+          <li>✎ Adobe Illustrator</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Creative &amp; Professional</h3>
+        <ul class="badges">
+          <li>✦ Graphics Design</li>
+          <li>✦ Project Work &amp; Documentation</li>
+          <li>✦ Internet Applications</li>
+        </ul>
+      </div>
+      <footer>04</footer>
+    </section>
+
+    <section class="page" data-id="languages">
+      <p class="hand">chapter five</p>
+      <h2>Languages</h2><span class="rule"></span>
+      <div class="lang"><strong lang="bn">বাংলা</strong><span>Bangla</span></div>
+      <div class="lang"><strong>ENGLISH</strong><span>English</span></div>
+      <footer>05</footer>
+    </section>
+
+    <section class="page" data-id="personal">
+      <p class="hand">chapter six</p>
+      <h2>A Little More About Me</h2><span class="rule"></span>
+      <dl class="info">
+        <div>
+          <dt>Name</dt>
+          <dd>Sadika Islam</dd>
+        </div>
+        <div>
+          <dt>Father’s Name</dt>
+          <dd>Md. Saiful Islam</dd>
+        </div>
+        <div>
+          <dt>Mother’s Name</dt>
+          <dd>Sabina Yesmen</dd>
+        </div>
+        <div>
+          <dt>Date of Birth</dt>
+          <dd>20 July 2004</dd>
+        </div>
+        <div>
+          <dt>Gender</dt>
+          <dd>Female</dd>
+        </div>
+        <div>
+          <dt>Nationality</dt>
+          <dd>Bangladeshi</dd>
+        </div>
+      </dl>
+      <footer>06</footer>
+    </section>
+
+    <section class="page" data-id="contact">
+      <p class="hand">chapter seven</p>
+      <h2>Let’s Connect</h2><span class="rule"></span>
+      <a class="card link" href="mailto:sadika222301@gmail.com">
+        <h3>Email</h3>
+        <p>sadika222301@gmail.com</p>
+      </a>
+      <a class="card link" href="tel:01720632048">
+        <h3>Phone</h3>
+        <p>01720632048</p>
+      </a>
+      <div class="card">
+        <h3>Present Address</h3>
+        <p>107/3 East Bashabo, Dhaka</p>
+      </div>
+      <div class="card">
+        <h3>Permanent Address</h3>
+        <p>V: Goborgara, P.O: Mothurapur, P.S: Daulatpur, Dist: Kushtia</p>
+      </div>
+      <footer>07</footer>
+    </section>
+
+    <section class="page center" data-id="thanks">
+      <p class="orn">❦</p>
+      <h2 class="big">THANK YOU</h2><span class="rule"></span>
+      <p class="body quote">“Thank you for taking the time to explore my journey.”</p>
+    </section>
+
+    <section class="page center" data-id="closing">
+      <p class="hand">the end — or the beginning</p>
+      <h2 class="big">SADIKA ISLAM</h2><span class="rule"></span>
+      <p class="body">Management Student<br>Creative Designer</p>
+      <div class="actions">
+        <a class="btn" data-cv href="Sadika-Islam-CV.pdf" download="Sadika-Islam-CV.pdf"
+          aria-label="Download Sadika Islam's CV as PDF">Download CV</a>
+        <button class="btn ghost" data-act="restart" aria-label="Close the book and return to the cover">Start
+          Again</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
